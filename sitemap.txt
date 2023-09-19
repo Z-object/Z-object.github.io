@@ -1,2 +1,5 @@
 http://example.com/2023/08/15/hello-world/
+http://example.com/repository/index.html
+http://example.com/links/index.html
+http://example.com/books/index.html
 http://example.com/
