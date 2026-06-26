@@ -136,11 +136,46 @@
     <p>© 2026 Z&#39;live · Powered by Hexo</p>
     <p>
       <a href="/atom.xml">RSS</a>
-      
-      
+       · <a href="/z-object" target="_blank" rel="noopener">GitHub</a>
+       · <a href="mailto:/1193861709@qq.com">邮箱</a>
     </p>
   </div>
 </footer>
+
+
+
+  <!--
+  悬浮评论框（精简版）
+  - 默认：右下角一个聊天气泡小按钮
+  - 点击后：从右下角滑出完整评论面板
+  - 关闭按钮：收回小按钮状态
+  - 在 layout.ejs 中通过 EJS 条件控制是否渲染（关于 / 归档页不显示）
+-->
+
+
+  <meta name="zlive-twikoo-env" content="https://mongodb-atlas-zlive-twikoo.netlify.app">
+
+<div class="zlive-comment-fab" id="zlive-comment-fab" aria-label="打开评论" role="button" tabindex="0">
+  <svg class="zlive-fab-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+    <path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2zm2 4v2h12V8H6zm0 4v2h8v-2H6z"/>
+  </svg>
+  <span class="zlive-fab-label">评论</span>
+</div>
+
+<aside class="zlive-comment-panel" id="zlive-comment-panel" aria-hidden="true" role="dialog" aria-label="评论面板">
+  <header class="zlive-comment-head">
+    <span class="zlive-comment-title">评论</span>
+    <button class="zlive-comment-close" id="zlive-comment-close" aria-label="关闭评论" type="button">
+      <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/>
+      </svg>
+    </button>
+  </header>
+  <div class="zlive-comment-body" id="zlive-comment-body">
+    <div class="zlive-comment-placeholder">评论加载中…</div>
+  </div>
+  
+</aside>
 
 
 <script src="/js/main.js"></script>

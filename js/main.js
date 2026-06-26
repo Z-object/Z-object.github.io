@@ -151,4 +151,78 @@
       });
     }
   });
+
+  // ---------- 5. 悬浮评论框 ----------
+  var fab     = document.getElementById('zlive-comment-fab');
+  var panel   = document.getElementById('zlive-comment-panel');
+  var closeBtn = document.getElementById('zlive-comment-close');
+  var body    = document.getElementById('zlive-comment-body');
+
+  if (fab && panel && closeBtn && body) {
+    var twikooEnvId =
+      (document.querySelector('meta[name="zlive-twikoo-env"]') || {}).content || '';
+
+    var loaded = false;
+    var loading = false;
+
+    var loadTwikoo = function (cb) {
+      if (loaded) { cb && cb(); return; }
+      if (loading) { return; }
+      loading = true;
+      var s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.min.js';
+      s.async = true;
+      s.onload = function () {
+        loaded = true;
+        loading = false;
+        if (window.twikoo && twikooEnvId) {
+          window.twikoo.init({
+            envId: twikooEnvId,
+            el: '#zlive-comment-body',
+            // region: 'ap-guangzhou'  // 如果你的 server 在国内，可解开
+          });
+        }
+        cb && cb();
+      };
+      s.onerror = function () {
+        loading = false;
+        body.innerHTML = '<div class="zlive-comment-placeholder">评论脚本加载失败，请检查网络。</div>';
+      };
+      document.body.appendChild(s);
+    };
+
+    var openPanel = function () {
+      panel.classList.add('is-open');
+      panel.setAttribute('aria-hidden', 'false');
+      fab.classList.add('is-hidden');
+      if (!loaded && twikooEnvId) {
+        body.innerHTML = '<div class="zlive-comment-placeholder">评论加载中…</div>';
+        loadTwikoo();
+      } else if (!twikooEnvId) {
+        body.innerHTML = '';
+      }
+    };
+
+    var closePanel = function () {
+      panel.classList.remove('is-open');
+      panel.setAttribute('aria-hidden', 'true');
+      fab.classList.remove('is-hidden');
+    };
+
+    fab.addEventListener('click', openPanel);
+    fab.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openPanel(); }
+    });
+    closeBtn.addEventListener('click', closePanel);
+
+    // ESC 关闭
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && panel.classList.contains('is-open')) closePanel();
+    });
+
+    // 没有配置 envId 时给个空提示文案
+    if (!twikooEnvId) {
+      body.innerHTML = '<div class="zlive-comment-placeholder">未配置 Twikoo 环境 ID<br><small>主题 _config.yml → twikoo.envId</small></div>';
+    }
+  }
 })();
