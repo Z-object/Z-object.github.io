@@ -1381,60 +1381,53 @@ body.dark-hero header.site-header.scrolled .site-nav a.active {
   font-size: 13px;
   color: #1f2d3d;
 }
+.zlive-comment-body .tk-submit {
+  padding: 10px 2px 8px;
+  margin: 0;
+  border-bottom: 1px solid #ece7da;
+  position: relative;
+}
 .zlive-comment-body .tk-row.tk-meta {
-  display: flex;
-  gap: 6px;
-  padding: 4px 4px 0;
-  flex-wrap: wrap;
+  display: none !important;
 }
-.zlive-comment-body .tk-meta-input {
-  flex: 1;
-  min-width: 90px;
-  background: #f5f1e8;
-  border: 1px solid transparent;
-  border-radius: 8px;
-  padding: 8px 12px;
-  font-size: 12px;
-  font-family: inherit;
-  color: #1f2d3d;
-  outline: none;
-  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+.zlive-comment-body .tk-avatar-img-wrap {
+  display: none !important;
 }
-.zlive-comment-body .tk-meta-input::placeholder {
-  color: #a3aab4;
+.zlive-comment-body .tk-meta-labels {
+  display: none !important;
 }
-.zlive-comment-body .tk-meta-input:hover {
-  background: #fff;
-  border-color: #ece7da;
+.zlive-comment-body .tk-security {
+  display: none !important;
 }
-.zlive-comment-body .tk-meta-input:focus {
-  background: #fff;
-  border-color: #2d6cb3;
-  box-shadow: 0 0 0 3px rgba(45,108,179,0.08);
+.zlive-comment-body [class*="tk-preview"] {
+  display: none !important;
 }
 .zlive-comment-body .tk-editor {
-  margin: 8px 4px 0;
+  margin: 0;
   background: #f5f1e8;
-  border: 1px solid transparent;
-  border-radius: 10px;
+  border: 2px solid transparent;
+  border-radius: 18px;
   overflow: hidden;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.25s;
+}
+.zlive-comment-body .tk-editor:hover {
+  background: #fff;
 }
 .zlive-comment-body .tk-editor:focus-within {
   background: #fff;
   border-color: #2d6cb3;
-  box-shadow: 0 0 0 3px rgba(45,108,179,0.08);
+  box-shadow: 0 6px 18px rgba(45,108,179,0.12), 0 0 0 4px rgba(45,108,179,0.06);
 }
 .zlive-comment-body .tk-editor .tk-edit {
   width: 100%;
-  min-height: 72px;
-  padding: 10px 14px;
+  min-height: 76px;
+  padding: 16px 16px 6px;
   border: none;
   background: transparent;
   font-family: inherit;
-  font-size: 13px;
+  font-size: 14px;
   color: #1f2d3d;
-  line-height: 1.6;
+  line-height: 1.7;
   resize: none;
   outline: none;
   box-sizing: border-box;
@@ -1442,23 +1435,26 @@ body.dark-hero header.site-header.scrolled .site-nav a.active {
 }
 .zlive-comment-body .tk-editor .tk-edit::placeholder {
   color: #a3aab4;
+  font-size: 13px;
 }
 .zlive-comment-body .tk-editor .tk-row.tk-actions {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 4px 6px 6px;
-  border-top: 1px dashed #ece7da;
+  justify-content: flex-end;
+  padding: 4px 8px 8px;
   background: transparent;
+  gap: 4px;
 }
 .zlive-comment-body .tk-editor .tk-row.tk-count {
   font-size: 11px;
   color: #a3aab4;
-  padding: 0 8px 0 0;
+  padding: 0 8px;
+  letter-spacing: 0.3px;
+  margin-right: auto;
 }
 .zlive-comment-body .tk-action-icon {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: transparent;
   border: none;
@@ -1467,48 +1463,57 @@ body.dark-hero header.site-header.scrolled .site-nav a.active {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
 }
 .zlive-comment-body .tk-action-icon:hover {
   background: #f5f1e8;
-  color: #2d6cb3;
+  color: #f5a623;
+  transform: scale(1.1);
+}
+.zlive-comment-body .tk-action-icon:active {
+  transform: scale(0.95);
 }
 .zlive-comment-body .tk-send {
-  background: #2d6cb3;
-  color: #fbf9f4;
+  background: linear-gradient(135deg, #f5a623 0%, #ff8c42 100%);
+  color: #fff;
   border: none;
-  border-radius: 6px;
-  padding: 5px 16px;
+  border-radius: 999px;
+  padding: 6px 18px 6px 14px;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.5px;
   cursor: pointer;
-  transition: background 0.2s, opacity 0.2s;
+  box-shadow: 0 3px 10px rgba(245,166,35,0.32);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, opacity 0.2s;
+}
+.zlive-comment-body .tk-send::before {
+  content: '🚀';
+  font-size: 13px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .zlive-comment-body .tk-send:hover {
-  background: #3a7ec2;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(245,166,35,0.42);
+}
+.zlive-comment-body .tk-send:hover::before {
+  transform: translate(2px, -2px) rotate(15deg);
+}
+.zlive-comment-body .tk-send:active {
+  transform: translateY(0);
 }
 .zlive-comment-body .tk-send:disabled,
 .zlive-comment-body .tk-send[disabled] {
   background: #ece7da;
   color: #a3aab4;
+  box-shadow: none;
   cursor: not-allowed;
 }
-.zlive-comment-body .tk-preview {
-  background: transparent;
-  border: 1px solid #ece7da;
-  color: #6b7889;
-  border-radius: 6px;
-  padding: 4px 12px;
-  font-size: 12px;
-  cursor: pointer;
-  margin-right: 6px;
-  transition: border-color 0.2s, color 0.2s, background 0.2s;
-}
-.zlive-comment-body .tk-preview:hover {
-  border-color: #2d6cb3;
-  color: #2d6cb3;
-  background: rgba(45,108,179,0.04);
+.zlive-comment-body .tk-send:disabled::before,
+.zlive-comment-body .tk-send[disabled]::before {
+  content: '💤';
 }
 .zlive-comment-body .tk-security {
   font-size: 11px;
@@ -1522,16 +1527,31 @@ body.dark-hero header.site-header.scrolled .site-nav a.active {
 }
 .zlive-comment-body .tk-comment {
   display: flex;
-  gap: 10px;
-  padding: 12px 6px;
+  gap: 8px;
+  padding: 10px 6px;
   border-bottom: 1px dashed #ece7da;
   transition: background 0.2s;
   border-radius: 6px;
 }
-.zlive-comment-body .tk-comment:last-child {
+.zlive-comment-body .tk-avatar {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #ece7da;
+  background: #f5f1e8;
+}
+.zlive-comment-body .tk-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.zlive-comment-body .tk-avatar:last-child {
   border-bottom: none;
 }
-.zlive-comment-body .tk-comment:hover {
+.zlive-comment-body .tk-avatar:hover {
   background: #f5f1e8;
 }
 .zlive-comment-body .tk-avatar {
