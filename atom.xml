@@ -33,8 +33,8 @@
     </author>
     <category term="音乐" scheme="http://example.com/categories/%E9%9F%B3%E4%B9%90/"/>
     <category term="乐评" scheme="http://example.com/tags/%E4%B9%90%E8%AF%84/"/>
-    <category term="The Weeknd" scheme="http://example.com/tags/The-Weeknd/"/>
     <category term="R&amp;B" scheme="http://example.com/tags/R-B/"/>
+    <category term="The Weeknd" scheme="http://example.com/tags/The-Weeknd/"/>
     <category term="Synthwave" scheme="http://example.com/tags/Synthwave/"/>
     <category term="复古" scheme="http://example.com/tags/%E5%A4%8D%E5%8F%A4/"/>
     <content>
@@ -102,8 +102,8 @@
     </author>
     <category term="音乐" scheme="http://example.com/categories/%E9%9F%B3%E4%B9%90/"/>
     <category term="乐评" scheme="http://example.com/tags/%E4%B9%90%E8%AF%84/"/>
-    <category term="R&amp;B" scheme="http://example.com/tags/R-B/"/>
     <category term="KIRBY" scheme="http://example.com/tags/KIRBY/"/>
+    <category term="R&amp;B" scheme="http://example.com/tags/R-B/"/>
     <category term="灵魂乐" scheme="http://example.com/tags/%E7%81%B5%E9%AD%82%E4%B9%90/"/>
     <category term="Spider-Noir" scheme="http://example.com/tags/Spider-Noir/"/>
     <content>

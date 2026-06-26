@@ -170,7 +170,7 @@
       if (loading) { return; }
       loading = true;
       var s = document.createElement('script');
-      s.src = 'https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.min.js';
+      s.src = 'https://cdn.jsdelivr.net/npm/twikoo@1.7.13/dist/twikoo.min.js';
       s.async = true;
       s.onload = function () {
         loaded = true;
