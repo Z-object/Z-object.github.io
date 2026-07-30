@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello Agents | Z&#39;live</title>
+  <meta name="description" content="记录生活的每个角落 · 电影 / 音乐 / 番剧 / 专业笔记 / 生活碎片">
+  <meta name="author" content="邹">
+  <meta name="description" content="Hello Agents第一章初识智能体1.1 什么是智能体1.1.1 什么是传统视角下的智能体在人工智能领域，智能体被定义为任何能够通过传感器（Sensors） 感知其所处环境（Environment） ，并自主地通过执行器（Actuators） 采取行动（Action） 以达成特定目标的实体。 大语言模型（Large Language Model, LLM），称之为“传统智能体”的范式，并非单">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello Agents">
+<meta property="og:url" content="http://example.com/2026/07/29/%E4%B8%93%E4%B8%9A/Agents/hello-agents/index.html">
+<meta property="og:site_name" content="Z&#39;live">
+<meta property="og:description" content="Hello Agents第一章初识智能体1.1 什么是智能体1.1.1 什么是传统视角下的智能体在人工智能领域，智能体被定义为任何能够通过传感器（Sensors） 感知其所处环境（Environment） ，并自主地通过执行器（Actuators） 采取行动（Action） 以达成特定目标的实体。 大语言模型（Large Language Model, LLM），称之为“传统智能体”的范式，并非单">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2026/07/29/%E4%B8%93%E4%B8%9A/Agents/hello-agents/image-20260727222813-111pdx9.png">
+<meta property="og:image" content="http://example.com/2026/07/29/%E4%B8%93%E4%B8%9A/Agents/hello-agents/image-20260727223608-arzwc1c.png">
+<meta property="og:image" content="http://example.com/2026/07/29/%E4%B8%93%E4%B8%9A/Agents/hello-agents/image-20260727224418-2zalbau.png">
+<meta property="og:image" content="http://example.com/2026/07/29/%E4%B8%93%E4%B8%9A/Agents/hello-agents/image-20260727224739-41im62o.png">
+<meta property="og:image" content="http://example.com/2026/07/29/%E4%B8%93%E4%B8%9A/Agents/hello-agents/image-20260727225338-ecbhw5h.png">
+<meta property="og:image" content="http://example.com/2026/07/29/%E4%B8%93%E4%B8%9A/Agents/hello-agents/image-20260727225758-7kde84l.png">
+<meta property="article:published_time" content="2026-07-29T14:07:15.000Z">
+<meta property="article:modified_time" content="2026-07-30T04:52:11.822Z">
+<meta property="article:author" content="邹">
+<meta property="article:tag" content="Agent">
+<meta property="article:tag" content="LLM">
+<meta property="article:tag" content="第一章">
+<meta property="article:tag" content="入门">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2026/07/29/%E4%B8%93%E4%B8%9A/Agents/hello-agents/image-20260727222813-111pdx9.png">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="alternate" type="application/atom+xml" title="Z&#39;live" href="/atom.xml">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233d4a3a'/><text x='50' y='68' text-anchor='middle' font-size='56' font-family='sans-serif' font-weight='bold' fill='%23f4ede0'>Z</text></svg>">
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body class="post">
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="site-name" href="/">
+      Z&#39;live<span>邹的生活档案</span>
+    </a>
+    <nav class="site-nav">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a></li>
+    
+      <li><a href="/categories/%E7%94%B5%E5%BD%B1/">电影</a></li>
+    
+      <li><a href="/categories/%E9%9F%B3%E4%B9%90/">音乐</a></li>
+    
+      <li><a href="/categories/%E7%95%AA%E5%89%A7/">番剧</a></li>
+    
+      <li><a href="/categories/%E4%B8%93%E4%B8%9A/">专业</a></li>
+    
+      <li><a href="/archives/">归档</a></li>
+    
+      <li><a href="/about/">关于</a></li>
+    
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+<main>
+  <article class="post-detail">
+  <div class="container">
+    <header class="post-detail-header reveal">
+      <h1 class="post-detail-title">Hello Agents</h1>
+      <div class="post-detail-meta">
+        <time>2026-07-29</time>
+        
+          <a href="/categories/Agents/">Agents</a>
+        
+        
+          <a href="/tags/Agent/">#Agent</a>
+        
+          <a href="/tags/LLM/">#LLM</a>
+        
+          <a href="/tags/%E7%AC%AC%E4%B8%80%E7%AB%A0/">#第一章</a>
+        
+          <a href="/tags/%E5%85%A5%E9%97%A8/">#入门</a>
+        
+      </div>
+    </header>
+
+    
+
+    
+
+    <div class="post-content reveal">
+      <h1 id="Hello-Agents"><a href="#Hello-Agents" class="headerlink" title="Hello Agents"></a>Hello Agents</h1><h1 id="第一章初识智能体"><a href="#第一章初识智能体" class="headerlink" title="第一章初识智能体"></a>第一章初识智能体</h1><h2 id="1-1-什么是智能体"><a href="#1-1-什么是智能体" class="headerlink" title="1.1 什么是智能体"></a>1.1 什么是智能体</h2><h3 id="1-1-1-什么是传统视角下的智能体"><a href="#1-1-1-什么是传统视角下的智能体" class="headerlink" title="1.1.1 什么是传统视角下的智能体"></a>1.1.1 什么是传统视角下的智能体</h3><p>在人工智能领域，智能体被定义为任何能够通过<strong>传感器（Sensors）</strong> 感知其所处<strong>环境（Environment）</strong> ，并<strong>自主</strong>地通过<strong>执行器（Actuators）</strong> 采取<strong>行动（Action）</strong> 以达成特定目标的实体。</p>
+<p><strong>大语言模型（Large Language Model, LLM），称之为“传统智能体”的范式，并非单一的静态概念，而是经历了一条从简单到复杂、从被动反应到主动学习的清晰演进路线。</strong></p>
+<ul>
+<li><p><strong>反射智能体（Simple Reflex Agent）</strong> 。它们的决策核心由工程师明确设计的“条件-动作”规则构成，如图 1.2 所示。经典的自动恒温器便是如此：若传感器感知的室温高于设定值，则启动制冷系统。</p>
+</li>
+<li><p><strong>基于模型的反射智能体（Model-Based Reflex Agent）</strong> 。这类智能体拥有一个内部的<strong>世界模型（World Model）</strong> ，用于追踪和理解环境中那些无法被直接感知的方面。它试图回答：“世界现在是什么样子的？”。例如，一辆在隧道中行驶的自动驾驶汽车，即便摄像头暂时无法感知到前方的车辆，它的内部模型依然会维持对那辆车存在、速度和预估位置的判断。这个内部模型让智能体拥有了初级的“记忆”，使其决策不再仅仅依赖于瞬时感知，而是基于一个更连贯、更完整的世界状态理解。</p>
+</li>
+<li><p><strong>基于目标的智能体（Goal-Based Agent）</strong> 的发展。与前两者不同，它的行为不再是被动地对环境做出反应，而是主动地、有预见性地选择能够导向某个特定未来状态的行动。这类智能体需要回答的问题是：“我应该做什么才能达成目标？”。经典的例子是 GPS 导航系统：你的目标是到达公司，智能体会基于地图数据（世界模型），通过搜索算法（如 A*算法）来规划（Planning）出一条最优路径。这类智能体的核心能力体现在了对未来的考量与规划上。</p>
+</li>
+<li><p>当多个目标需要权衡时，<strong>基于效用的智能体（Utility-Based Agent）</strong> 便随之出现。它为每一个可能的世界状态都赋予一个效用值，这个值代表了满意度的高低。智能体的核心目标不再是简单地达成某个特定状态，而是最大化期望效用。它需要回答一个更复杂的问题：“哪种行为能为我带来最满意的结果？”。这种架构让智能体学会在相互冲突的目标之间进行权衡，使其决策更接近人类的理性选择。</p>
+</li>
+</ul>
+<h3 id="1-1-2-大语言模型驱动的新范式"><a href="#1-1-2-大语言模型驱动的新范式" class="headerlink" title="1.1.2 大语言模型驱动的新范式"></a>1.1.2 大语言模型驱动的新范式</h3><p>以<strong>GPT（Generative Pre-trained Transformer）</strong> 为代表的大语言模型的出现，正在显著改变智能体的构建方法与能力边界。由大语言模型驱动的 LLM 智能体，其核心决策机制与传统智能体存在本质区别，从而赋予了其一系列全新的特性。</p>
+<p>简而言之，传统智能体的能力源于工程师的显式编程与知识构建，其行为模式是确定且有边界的；而 LLM 智能体则通过在海量数据上的预训练，获得了隐式的世界模型与强大的涌现能力，使其能够以更灵活、更通用的方式应对复杂任务。</p>
+<p>![image](image-20260727222157-0k6tw0q.png “表 1.1 传统智能体与 LLM 驱动智能体的核心对比</p>
+<p>“)​</p>
+<p>总而言之，我们正从开发专用自动化工具转向构建能自主解决问题的系统。核心不再是编写代码，而是引导一个通用的“大脑”去规划、行动和学习。</p>
+<h3 id="1-1-3-智能体的类型"><a href="#1-1-3-智能体的类型" class="headerlink" title="1.1.3 智能体的类型"></a>1.1.3 智能体的类型</h3><p>从三个互补的维度对智能体进行分类。</p>
+<h4 id="（1）基于内部决策架构的分类"><a href="#（1）基于内部决策架构的分类" class="headerlink" title="（1）基于内部决策架构的分类"></a>（1）<strong>基于内部决策架构的分类</strong></h4><p>第一种分类维度是依据智能体内部决策架构的复杂程度，它涵盖了从简单的<strong>反应式</strong>智能体，到引入内部模型的<strong>模型式</strong>智能体，再到更具前瞻性的<strong>基于目标</strong>和<strong>基于效用</strong>的智能体。此外，<strong>学习能力</strong>则是一种可赋予上述所有类型的元能力，使其能通过经验自我改进。</p>
+<h4 id="（2）基于时间与反应性的分类"><a href="#（2）基于时间与反应性的分类" class="headerlink" title="（2）基于时间与反应性的分类"></a>（2）<strong>基于时间与反应性的分类</strong></h4><p>第二种从智能体处理决策的时间维度进行分类：这个视角关注智能体是在接收到信息后立即行动，还是会经过深思熟虑的规划再行动。</p>
+<p>这揭示了智能体设计中一个核心权衡：追求速度的<strong>反应性（Reactivity）</strong> 与追求最优解的<strong>规划性（Deliberation）</strong> 之间的平衡，如图 1.3 所示。</p>
+<p><img src="/2026/07/29/%E4%B8%93%E4%B8%9A/Agents/hello-agents/image-20260727222813-111pdx9.png" alt="image" title="智能体决策时间与质量关系图">​</p>
+<ul>
+<li><strong>反应式智能体 (Reactive Agents)</strong></li>
+</ul>
+<p>这类智能体对环境刺激做出近乎即时的响应，决策延迟极低。它们通常遵循从感知到行动的直接映射，不进行或只进行极少的未来规划。上文的<strong>简单反应式</strong>和<strong>基于模型</strong>的智能体都属于此类别。</p>
+<p>其核心优势在于<strong>速度快、计算开销低</strong>，这在需要快速决策的动态环境中至关重要。</p>
+<p>代价是“短视”，由于缺乏长远规划，反应式智能体容易陷入局部最优，难以完成需要多步骤协调的复杂任务。</p>
+<ul>
+<li><strong>规划式智能体(Deliberative Agents)</strong></li>
+</ul>
+<p>规划式（或称审议式）智能体在行动前会进行复杂的思考和规划。它们不会立即对感知做出反应，而是会先利用其内部的世界模型，系统地探索未来的各种可能性，评估不同行动序列的后果，以期找到一条能够达成目标的最佳路径 。</p>
+<p><strong>基于目标</strong>和<strong>基于效用</strong>的智能体是典型的规划式智能体。</p>
+<p>它们的优势在于决策的战略性和远见。</p>
+<p>缺点是高昂的时间和计算成本。在瞬息万变的环境中，当规划式智能体还在深思熟虑时，采取行动的最佳时机可能早已过去。</p>
+<ul>
+<li><strong>混合式智能体(Hybrid Agents)</strong></li>
+</ul>
+<p>现实世界的复杂任务，往往既需要即时反应，也需要长远规划。</p>
+<p>例如智能旅行助手，既要能根据用户的即时反馈（如“这家酒店太贵了”）调整推荐（反应性），又要能规划出为期数天的完整旅行方案（规划性）。</p>
+<p>旨在结合<strong>反应式智能体和规划式智能体</strong>的优点，实现反应与规划的平衡。</p>
+<hr>
+<p>一种经典的混合架构是分层设计：底层是一个快速的反应模块，处理紧急情况和基本动作；高层则是一个审慎的规划模块，负责制定长远目标。而现代的 LLM 智能体，则展现了一种更灵活的混合模式。它们通常在一个“思考-行动-观察”的循环中运作，巧妙地将两种模式融为一体：</p>
+<ul>
+<li><strong>规划(Reasoning)</strong>  ：在“思考”阶段，LLM 分析当前状况，规划出下一步的合理行动。这是一个审议过程。</li>
+<li><strong>反应(Acting &amp; Observing)</strong>  ：在“行动”和“观察”阶段，智能体与外部工具或环境交互，并立即获得反馈。这是一个反应过程。</li>
+</ul>
+<p>通过这种方式，智能体将一个需要长远规划的宏大任务，分解为一系列“规划-反应”的微循环。这使其既能灵活应对环境的即时变化，又能通过连贯的步骤，最终完成复杂的长期目标。</p>
+<h4 id="（3）基于知识表示的分类"><a href="#（3）基于知识表示的分类" class="headerlink" title="（3）基于知识表示的分类"></a><strong>（3）基于知识表示的分类</strong></h4><p>这是一个更根本的分类维度，它探究智能体用以决策的知识，究竟是以何种形式存于其“思想”之中。这个问题是人工智能领域一场持续半个多世纪的辩论核心，并塑造了两种截然不同的 AI 文化。</p>
+<p><img src="/2026/07/29/%E4%B8%93%E4%B8%9A/Agents/hello-agents/image-20260727223608-arzwc1c.png" alt="image" title="图 1.4 符号主义、亚符号主义与神经符号混合主义的知识表示范式">​</p>
+<ul>
+<li><strong>符号主义 AI（Symbolic AI）</strong></li>
+</ul>
+<p>符号主义，常被称为<strong>传统人工智能</strong>，其核心信念是：智能源于对符号的逻辑操作。这里的符号是人类可读的实体（如词语、概念），操作则遵循严格的逻辑规则，</p>
+<p>如图 1.4 左侧所示。这好比一位一丝不苟的图书管理员，将世界知识整理为清晰的规则库和知识图谱。</p>
+<p><strong>其主要优势在于透明和可解释。（由于推理步骤明确，其决策过程可以被完整追溯，这在金融、医疗等高风险领域至关重要。）</strong></p>
+<p>缺点：它依赖于一个完备的规则体系，但在充满模糊和例外的现实世界中，任何未被覆盖的新情况都可能导致系统失灵，这就是所谓的“知识获取瓶颈”。</p>
+<ul>
+<li><strong>亚符号主义 AI（Sub-symbolic AI）</strong></li>
+</ul>
+<p>亚符号主义，或称连接主义，在这里，知识并非显式的规则，而是内隐地分布在一个由大量神经元组成的复杂网络中，是从海量数据中学习到的统计模式。<strong>神经网络和深度学习是其代表。</strong></p>
+<p>如图 1.4 中间所示，如果说符号主义 AI 是图书管理员，那么亚符号主义 AI 就像一个牙牙学语的孩童 。他不是通过学习“猫有四条腿、毛茸茸、会喵喵叫”这样的规则来认识猫的，而是在看过成千上万张猫的图片后，大脑中的神经网络能辨识出“猫”这个概念的视觉模式 。这种方法的强大之处在于其模式识别能力和对噪声数据的鲁棒性 。它能够轻松处理图像、声音等非结构化数据，这在符号主义 AI 看来是极其困难的任务。</p>
+<p>缺点：<u>伴随着不透明性</u>（亚符号主义系统通常被视为一个<strong>黑箱（Black Box）</strong> 。它能以惊人的准确率识别出图片中的猫，但你若问它“为什么你认为这是猫？”，它很可能无法给出一个合乎逻辑的解释。）</p>
+<pre><code>    它在&lt;u&gt;纯粹的逻辑推理任务上表现不佳&lt;/u&gt;，有时会产生看似合理却事实错误的幻觉 。
+</code></pre>
+<ul>
+<li><strong>神经符号主义 AI（Neuro-Symbolic AI）</strong></li>
+</ul>
+<p>神经符号主义 AI，也称神经符号混合主义。它的目标是融合两大范式的优点，创造出一个既能像神经网络一样从数据中学习，又能像符号系统一样进行逻辑推理的混合智能体。</p>
+<p>如图 1.4 所示：</p>
+<pre><code> **-  系统 1**是快速、凭直觉、并行的思维模式，类似于亚符号主义 AI 强大的模式识别能力。
+
+ **-  系统 2**是缓慢、有条理、基于逻辑的审慎思维，恰如符号主义 AI 的推理过程。
+</code></pre>
+<p>人类的智能，正源于这两个系统的协同工作。同样，一个真正鲁棒的 AI，也需要兼具二者之长。大语言模型驱动的智能体是神经符号主义的一个极佳实践范例。其内核是一个巨大的神经网络，使其具备模式识别和语言生成能力。然而，当它工作时，它会生成一系列结构化的中间步骤，如思想、计划或 API 调用，这些都是明确的、可操作的符号。通过这种方式，它实现了感知与认知、直觉与理性的初步融合。</p>
+<h2 id="1-2-智能体的构成与运行原理"><a href="#1-2-智能体的构成与运行原理" class="headerlink" title="1.2 智能体的构成与运行原理"></a>1.2 智能体的构成与运行原理</h2><h3 id="1-2-1-任务环境定义"><a href="#1-2-1-任务环境定义" class="headerlink" title="1.2.1 任务环境定义"></a>1.2.1 任务环境定义</h3><p>要理解智能体的运作，我们必须先理解它所处的<strong>任务环境</strong>。在人工智能领域，通常使用<strong>PEAS 模型</strong>来精确描述一个任务环境，即分析其<strong>性能度量(Performance)、环境(Environment)、执行器(Actuators)和传感器(Sensors)</strong>  。以上文提到的智能旅行助手为例，下表 1.2 展示了如何运用 PEAS 模型对其任务环境进行规约。</p>
+<p><img src="/2026/07/29/%E4%B8%93%E4%B8%9A/Agents/hello-agents/image-20260727224418-2zalbau.png" alt="image" title="表 1.2 智能旅行助手的 PEAS 描述">​</p>
+<p>首先，环境通常是<strong>部分可观察的</strong>。例如，旅行助手在查询航班时，无法一次性获取所有航空公司的全部实时座位信息。它只能通过调用航班预订 API，看到该 API 返回的部分数据，这就要求智能体必须具备记忆（记住已查询过的航线）和探索（尝试不同的查询日期）的能力。</p>
+<p>其次，行动的结果也并非总是确定的。根据结果的可预测性，环境可分为<strong>确定性</strong>和<strong>随机性</strong>。旅行助手的任务环境就是典型的随机性环境。当它搜索票价时，两次相邻的调用返回的机票价格和余票数量都可能不同，这就要求智能体必须具备处理不确定性、监控变化并及时决策的能力。</p>
+<p>此外，环境中还可能存在其他行动者，从而形成<strong>多智能体(Multi-agent)</strong>  环境。对于旅行助手而言，其他用户的预订行为、其他自动化脚本，甚至航司的动态调价系统，都是环境中的其他“智能体”。它们的行动（例如，订走最后一张特价票）会直接改变旅行助手所处环境的状态，这对智能体的快速响应和策略选择提出了更高要求。</p>
+<p>最后，几乎所有任务都发生在<strong>序贯</strong>且<strong>动态</strong>的环境中。“序贯”意味着当前动作会影响未来；而“动态”则意味着环境自身可能在智能体决策时发生变化。这就要求智能体的“感知-思考-行动-观察”循环必须能够快速、灵活地适应持续变化的世界。</p>
+<h3 id="1-2-2智能体的运行机制"><a href="#1-2-2智能体的运行机制" class="headerlink" title="1.2.2智能体的运行机制"></a>1.2.2智能体的运行机制</h3><p>智能体并非一次性完成任务，而是通过一个持续的循环与环境进行交互，这个核心机制被称为 <strong>智能体循环 (Agent Loop)</strong> 。如图 1.5 所示，该循环描述了智能体与环境之间的动态交互过程，构成了其自主行为的基础。</p>
+<p><img src="/2026/07/29/%E4%B8%93%E4%B8%9A/Agents/hello-agents/image-20260727224739-41im62o.png" alt="image" title="图 1.5 智能体与环境交互的基本循环">​</p>
+<p>这个循环主要包含以下几个相互关联的阶段：</p>
+<ol>
+<li><p><strong>感知 (Perception)</strong> ：这是循环的起点。智能体通过其传感器（例如，API 的监听端口、用户输入接口）接收来自环境的输入信息。这些信息，即<strong>观察 (Observation)</strong> ，既可以是用户的初始指令，也可以是上一步行动所导致的环境状态变化反馈。</p>
+</li>
+<li><p><strong>思考 (Thought)</strong> ：接收到观察信息后，智能体进入其核心决策阶段。对于 LLM 智能体而言，这通常是由大语言模型驱动的内部推理过程。如图所示，“思考”阶段可进一步细分为两个关键环节：</p>
+<ul>
+<li><strong>规划 (Planning)</strong> ：智能体基于当前的观察和其内部记忆，更新对任务和环境的理解，并制定或调整一个行动计划。这可能涉及将复杂目标分解为一系列更具体的子任务。</li>
+<li><strong>工具选择 (Tool Selection)</strong> ：根据当前计划，智能体从其可用的工具库中，选择最适合执行下一步骤的工具，并确定调用该工具所需的具体参数。</li>
+</ul>
+</li>
+<li><p><strong>行动 (Action)</strong> ：决策完成后，智能体通过其执行器（Actuators）执行具体的行动。这通常表现为调用一个选定的工具（如代码解释器、搜索引擎 API），从而对环境施加影响，意图改变环境的状态。</p>
+</li>
+</ol>
+<p>行动并非循环的终点。智能体的行动会引起<strong>环境 (Environment)</strong>  的<strong>状态变化 (State Change)</strong> ，环境随即会产生一个新的<strong>观察 (Observation)</strong>  作为结果反馈。这个新的观察又会在下一轮循环中被智能体的感知系统捕获，形成一个持续的“感知-思考-行动-观察”的闭环。智能体正是通过不断重复这一循环，逐步推进任务，从初始状态向目标状态演进。</p>
+<h3 id="1-2-3智能体的感知与行动"><a href="#1-2-3智能体的感知与行动" class="headerlink" title="1.2.3智能体的感知与行动"></a>1.2.3智能体的感知与行动</h3><p>在工程实践中，为了让 LLM 能够有效驱动这个循环，我们需要一套明确的<strong>交互协议 (Interaction Protocol)</strong>  来规范其与环境之间的信息交换。</p>
+<p>在许多现代智能体框架中，<strong>这一协议体现在对智能体每一次输出的结构化定义上。智能体的输出不再是单一的自然语言回复，而是一段遵循特定格式的文本，其中明确地展示了其内部的推理过程与最终决策。</strong></p>
+<p><img src="/2026/07/29/%E4%B8%93%E4%B8%9A/Agents/hello-agents/image-20260727225338-ecbhw5h.png" alt="image" title="Agent 思考过程  交互协议">​</p>
+<p>这个结构通常包含两个核心部分：</p>
+<ul>
+<li><strong>Thought (思考)</strong> ：这是智能体内部决策的“快照”。它以自然语言形式阐述了智能体如何分析当前情境、回顾上一步的观察结果、进行自我反思与问题分解，并最终规划出下一步的具体行动。</li>
+<li><strong>Action (行动)</strong> ：这是智能体基于思考后，决定对环境施加的具体操作，通常以函数调用的形式表示。</li>
+</ul>
+<p>例如，一个正在规划旅行的智能体可能会生成如下格式化的输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Thought: 用户想知道北京的天气。我需要调用天气查询工具。</span><br><span class="line">Action: get_weather(&quot;北京&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>这里的<code>Action</code>​字段构成了对外部世界的指令。一个外部的<strong>解析器 (Parser)</strong>  会捕捉到这个指令，并调用相应的<code>get_weather</code>​函数。</p>
+<p>行动执行后，环境会返回一个结果。例如，<code>get_weather</code>​函数可能返回一个包含详细天气数据的 JSON 对象。然而，原始的机器可读数据（如 JSON）通常包含 LLM 无需关注的冗余信息，且格式不符合其自然语言处理的习惯。</p>
+<p>因此，感知系统的一个重要职责就是扮演传感器的角色：将这个原始输出处理并封装成一段简洁、清晰的自然语言文本，即观察。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Observation: 北京当前天气为晴，气温25摄氏度，微风。</span><br></pre></td></tr></table></figure>
+
+<p>这段<code>Observation</code>​文本会被反馈给智能体，作为下一轮循环的主要输入信息，供其进行新一轮的<code>Thought</code>​和<code>Action</code>​。</p>
+<p>综上所述，通过这个由 Thought、Action、Observation 构成的严谨循环，LLM 智能体得以将内部的语言推理能力，与外部环境的真实信息和工具操作能力有效地结合起来。</p>
+<p><img src="/2026/07/29/%E4%B8%93%E4%B8%9A/Agents/hello-agents/image-20260727225758-7kde84l.png" alt="image" title="动手实现查看">​</p>
+
+    </div>
+
+    <footer class="post-detail-footer">
+      
+        <a href="/2026/07/30/%E4%B8%93%E4%B8%9A/CISA/welcome/">← CISA 板块 · 欢迎</a>
+      
+      
+        <a href="/2026/07/29/%E4%B8%93%E4%B8%9A/%E8%BD%AF%E8%80%83-%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E5%B7%A5%E7%A8%8B%E5%B8%88/ruankao-info-sec-ch1/">软考-中级：信息安全工程师 · 第一章 基础章 →</a>
+      
+    </footer>
+  </div>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 Z&#39;live · Powered by Hexo</p>
+    <p>
+      <a href="/atom.xml">RSS</a>
+       · <a href="/z-object" target="_blank" rel="noopener">GitHub</a>
+       · <a href="mailto:/1193861709@qq.com">邮箱</a>
+    </p>
+  </div>
+</footer>
+
+
+
+  <!--
+  悬浮评论框（精简版）
+  - 默认：右下角一个聊天气泡小按钮
+  - 点击后：从右下角滑出完整评论面板
+  - 关闭按钮：收回小按钮状态
+  - 在 layout.ejs 中通过 EJS 条件控制是否渲染（关于 / 归档页不显示）
+-->
+
+
+  <meta name="zlive-twikoo-env" content="https://mongodb-atlas-zlive-twikoo.netlify.app">
+
+<div class="zlive-comment-fab" id="zlive-comment-fab" aria-label="打开评论" role="button" tabindex="0">
+  <svg class="zlive-fab-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+    <path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2zm2 4v2h12V8H6zm0 4v2h8v-2H6z"/>
+  </svg>
+  <span class="zlive-fab-label">评论</span>
+</div>
+
+<aside class="zlive-comment-panel" id="zlive-comment-panel" aria-hidden="true" role="dialog" aria-label="评论面板">
+  <header class="zlive-comment-head">
+    <span class="zlive-comment-title">评论</span>
+    <button class="zlive-comment-close" id="zlive-comment-close" aria-label="关闭评论" type="button">
+      <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/>
+      </svg>
+    </button>
+  </header>
+  <div class="zlive-comment-body" id="zlive-comment-body">
+    <div class="zlive-comment-placeholder">评论加载中…</div>
+  </div>
+  
+</aside>
+
+
+<script src="/js/main.js"></script>
+
+</body>
+</html>
