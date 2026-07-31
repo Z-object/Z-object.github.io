@@ -232,4 +232,91 @@
       body.innerHTML = '<div class="zlive-comment-placeholder">未配置 Twikoo 环境 ID<br><small>主题 _config.yml → twikoo.envId</small></div>';
     }
   }
+
+  // ---------- 7. 文章目录 (TOC)：平滑滚动 + 高亮当前章节 ----------
+  var toc = document.getElementById('post-toc');
+  if (toc) {
+    // 显示动画
+    requestAnimationFrame(function () {
+      toc.classList.add('is-ready');
+    });
+
+    // 收集所有 h1/h2/h3 锚点
+    var headings = Array.prototype.slice.call(
+      document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3')
+    );
+    if (headings.length) {
+      // 为每个 heading 加 id（如果还没有）
+      headings.forEach(function (h) {
+        if (!h.id) {
+          h.id = (h.textContent || '').trim().replace(/\s+/g, '-').toLowerCase();
+        }
+      });
+
+      // 点击目录链接：平滑滚动
+      var tocLinks = toc.querySelectorAll('a[href^="#"]');
+      tocLinks.forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          var href = a.getAttribute('href');
+          if (!href || href === '#') return;
+          var target = document.querySelector(href);
+          if (!target) return;
+          e.preventDefault();
+          var offset = 80; // 顶部留点空隙（避开 sticky header）
+          var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+          // 立刻高亮
+          tocLinks.forEach(function (x) { x.classList.remove('is-active'); });
+          a.classList.add('is-active');
+        });
+      });
+
+      // 滚动监听：当前章节高亮
+      var lastActiveIdx = -1;
+      var activeLink = function (idx) {
+        if (idx === lastActiveIdx) return;
+        lastActiveIdx = idx;
+        tocLinks.forEach(function (x) { x.classList.remove('is-active'); });
+        if (idx >= 0 && tocLinks[idx]) {
+          tocLinks[idx].classList.add('is-active');
+          // 自动滚动目录到当前章节
+          var link = tocLinks[idx];
+          var tocBox = toc.querySelector('.post-toc-card');
+          if (tocBox) {
+            var lRect = link.getBoundingClientRect();
+            var tRect = tocBox.getBoundingClientRect();
+            if (lRect.top < tRect.top + 20 || lRect.bottom > tRect.bottom - 20) {
+              link.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+            }
+          }
+        }
+      };
+
+      var onScroll = function () {
+        // 找到当前视口最顶部的 heading
+        var threshold = window.scrollY + 120;
+        var idx = -1;
+        for (var i = 0; i < headings.length; i++) {
+          if (headings[i].offsetTop <= threshold) {
+            idx = i;
+          } else {
+            break;
+          }
+        }
+        // idx 对应 tocLinks 中的位置
+        // 因为 toc 是按文章顺序生成，idx 直接对应 tocLinks[idx]
+        activeLink(idx);
+      };
+
+      var scrollTimer = null;
+      window.addEventListener('scroll', function () {
+        if (scrollTimer) return;
+        scrollTimer = requestAnimationFrame(function () {
+          scrollTimer = null;
+          onScroll();
+        });
+      }, { passive: true });
+      onScroll(); // 初始化
+    }
+  }
 })();
