@@ -1357,232 +1357,6 @@ body.dark-hero header.site-header.scrolled .site-nav a.active {
     transform: none;
   }
 }
-.zlive-tools-fab {
-  position: fixed;
-  right: 28px;
-  bottom: 88px;
-  z-index: 79;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 10px 16px;
-  border-radius: 999px;
-  background: #f0ede5;
-  color: #6b7889;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(31,45,61,0.08), 0 1px 3px rgba(0,0,0,0.04);
-  cursor: pointer;
-  user-select: none;
-  border: 1px solid #ece7da;
-  outline: none;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
-}
-.zlive-tools-fab:hover {
-  transform: translateY(-2px);
-  background: #e8e3d6;
-  color: #1f2d3d;
-  box-shadow: 0 8px 20px rgba(31,45,61,0.14), 0 2px 6px rgba(0,0,0,0.06);
-}
-.zlive-tools-fab:active {
-  transform: translateY(0);
-}
-.zlive-tools-fab .zlive-tools-fab-icon {
-  display: inline-block;
-  vertical-align: middle;
-}
-.zlive-tools-menu {
-  position: fixed;
-  right: 28px;
-  bottom: 140px;
-  z-index: 78;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(12px);
-  transition: opacity 0.22s ease, transform 0.22s ease;
-}
-.zlive-tools-menu.is-open {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-.zlive-tools-menu-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 16px;
-  border-radius: 12px;
-  background: #fff;
-  border: 1px solid #ece7da;
-  color: #1f2d3d;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  white-space: nowrap;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  min-width: 140px;
-  text-align: left;
-  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
-  font-family: inherit;
-}
-.zlive-tools-menu-item:hover:not(.is-disabled) {
-  background: #fbf9f4;
-  color: #2d6cb3;
-  transform: translateX(-2px);
-  box-shadow: 0 4px 14px rgba(45,108,179,0.18);
-}
-.zlive-tools-menu-item.is-disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-  color: #a3aab4;
-  background: #fbf9f4;
-  box-shadow: none;
-}
-.zlive-tools-menu-item .zlive-tools-menu-icon {
-  font-size: 16px;
-  line-height: 1;
-}
-.zlive-calc {
-  position: fixed;
-  right: 28px;
-  bottom: 140px;
-  z-index: 80;
-  width: 320px;
-  padding: 14px;
-  background: #f0ede5;
-  border: 1px solid #ece7da;
-  border-radius: 12px;
-  box-shadow: 0 18px 48px rgba(31,45,61,0.18), 0 4px 12px rgba(0,0,0,0.08);
-  display: none;
-  flex-direction: column;
-  gap: 10px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
-}
-.zlive-calc.is-open {
-  display: flex;
-}
-.zlive-calc.is-closed-by-user {
-  display: none;
-}
-.zlive-calc-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 4px;
-}
-.zlive-calc-head .zlive-calc-title {
-  font-size: 12px;
-  font-weight: 600;
-  color: #6b7889;
-  letter-spacing: 0.5px;
-}
-.zlive-calc-close {
-  width: 22px;
-  height: 22px;
-  border-radius: 4px;
-  border: none;
-  background: transparent;
-  color: #6b7889;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s;
-}
-.zlive-calc-close:hover {
-  background: #e8e3d6;
-  color: #1f2d3d;
-}
-.zlive-calc-display {
-  background: transparent;
-  padding: 8px 12px;
-  font-size: 32px;
-  font-weight: 300;
-  text-align: right;
-  color: #1f2d3d;
-  font-variant-numeric: tabular-nums;
-  min-height: 56px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  overflow: hidden;
-  word-break: break-all;
-  line-height: 1.1;
-}
-.zlive-calc-pad {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
-}
-.zlive-calc-btn {
-  height: 44px;
-  border-radius: 6px;
-  border: 1px solid #ece7da;
-  background: #fff;
-  color: #1f2d3d;
-  font-size: 16px;
-  font-family: inherit;
-  cursor: pointer;
-  transition: background 0.1s, transform 0.05s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  user-select: none;
-}
-.zlive-calc-btn:hover {
-  background: #fbf9f4;
-}
-.zlive-calc-btn:active {
-  transform: scale(0.96);
-  background: #f0ede5;
-}
-.zlive-calc-btn.is-func {
-  background: #fbf9f4;
-  color: #1f2d3d;
-  font-size: 14px;
-}
-.zlive-calc-btn.is-func:hover {
-  background: #f0ede5;
-}
-.zlive-calc-btn.is-op {
-  background: #fbf9f4;
-  color: #1f2d3d;
-  font-size: 18px;
-}
-.zlive-calc-btn.is-op:hover {
-  background: #e8e3d6;
-}
-.zlive-calc-btn.is-equal {
-  background: #2d6cb3;
-  color: #fff;
-  border-color: #2d6cb3;
-  font-size: 18px;
-}
-.zlive-calc-btn.is-equal:hover {
-  background: #3a7ec2;
-  border-color: #3a7ec2;
-}
-@media (max-width: 540px) {
-  .zlive-tools-fab {
-    right: 16px;
-    bottom: 80px;
-    padding: 8px 12px;
-    font-size: 12px;
-  }
-  .zlive-tools-menu,
-  .zlive-calc {
-    right: 12px;
-  }
-  .zlive-calc {
-    width: calc(100vw - 24px);
-    max-width: 320px;
-  }
-}
 .zlive-comment-fab {
   position: fixed;
   right: 28px;
@@ -1981,6 +1755,499 @@ body.dark-hero header.site-header.scrolled .site-nav a.active {
     color: #a3aab4;
   }
 }
+.zlive-tools-fab {
+  position: fixed;
+  right: 28px;
+  bottom: 88px;
+  z-index: 79;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: #2d6cb3;
+  color: #fbf9f4;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 18px rgba(45,108,179,0.32), 0 2px 4px rgba(0,0,0,0.06);
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  outline: none;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, background 0.25s ease;
+}
+.zlive-tools-fab:hover {
+  transform: translateY(-2px);
+  background: #3a7ec2;
+  box-shadow: 0 10px 22px rgba(45,108,179,0.38), 0 3px 6px rgba(0,0,0,0.08);
+}
+.zlive-tools-fab:active {
+  transform: translateY(0);
+}
+.zlive-tools-fab:focus-visible {
+  box-shadow: 0 0 0 3px rgba(45,108,179,0.35), 0 6px 18px rgba(45,108,179,0.32);
+}
+.zlive-tools-fab .zlive-tools-fab-icon {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+.zlive-tools-fab .zlive-tools-fab-label {
+  line-height: 1;
+}
+.zlive-tools-menu {
+  position: fixed;
+  right: 28px;
+  bottom: 140px;
+  z-index: 80;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px) scale(0.96);
+  transform-origin: bottom right;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+.zlive-tools-menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+.zlive-tools-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #ece7da;
+  color: #1f2d3d;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  min-width: 140px;
+  text-align: left;
+  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+}
+.zlive-tools-menu-item:hover:not(.is-disabled) {
+  background: #fbf9f4;
+  color: #2d6cb3;
+  transform: translateX(-2px);
+  box-shadow: 0 4px 14px rgba(45,108,179,0.18);
+}
+.zlive-tools-menu-item.is-disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  color: #a3aab4;
+  background: #f5f1e8;
+  box-shadow: none;
+}
+.zlive-tools-menu-item .zlive-tools-menu-icon {
+  font-size: 16px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.zlive-tools-menu-item .zlive-tools-menu-text {
+  line-height: 1;
+}
+.zlive-tools-modal {
+  position: fixed;
+  right: 28px;
+  bottom: 140px;
+  z-index: 80;
+  display: none;
+  flex-direction: column;
+  background: #fbf9f4;
+  border: 1px solid #ece7da;
+  border-radius: 12px;
+  box-shadow: 0 18px 48px rgba(31,45,61,0.18), 0 4px 12px rgba(0,0,0,0.08);
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #1f2d3d;
+  opacity: 0;
+  transform: translateY(8px) scale(0.96);
+  transform-origin: bottom right;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.zlive-tools-modal.is-open {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.zlive-tools-modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid #ece7da;
+}
+.zlive-tools-modal-head .zlive-tools-modal-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7889;
+  letter-spacing: 0.5px;
+}
+.zlive-tools-modal-close {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  border: none;
+  background: transparent;
+  color: #6b7889;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+.zlive-tools-modal-close:hover {
+  background: #f5f1e8;
+  color: #1f2d3d;
+}
+.zlive-tools-modal-close svg {
+  display: block;
+}
+.zlive-calc {
+  width: 320px;
+  padding: 14px;
+  gap: 10px;
+}
+.zlive-calc-display {
+  background: transparent;
+  padding: 8px 12px;
+  font-size: 32px;
+  font-weight: 300;
+  text-align: right;
+  color: #1f2d3d;
+  font-variant-numeric: tabular-nums;
+  min-height: 56px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  overflow: hidden;
+  word-break: break-all;
+  line-height: 1.1;
+}
+.zlive-calc-pad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+.zlive-calc-btn {
+  height: 44px;
+  border-radius: 6px;
+  border: 1px solid #ece7da;
+  background: #fff;
+  color: #1f2d3d;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.05s, box-shadow 0.15s;
+}
+.zlive-calc-btn:hover {
+  background: #fbf9f4;
+}
+.zlive-calc-btn:active {
+  transform: scale(0.96);
+  background: #f5f1e8;
+}
+.zlive-calc-btn.is-func {
+  background: #f5f1e8;
+  color: #6b7889;
+  font-size: 14px;
+}
+.zlive-calc-btn.is-func:hover {
+  background: #fbf9f4;
+}
+.zlive-calc-btn.is-op {
+  color: #2d6cb3;
+  font-weight: 500;
+}
+.zlive-calc-btn.is-equal {
+  background: #2d6cb3;
+  color: #fbf9f4;
+  border-color: #2d6cb3;
+  font-weight: 500;
+}
+.zlive-calc-btn.is-equal:hover {
+  background: #3a7ec2;
+  border-color: #3a7ec2;
+}
+.zlive-base {
+  width: 360px;
+  padding: 0;
+  overflow: hidden;
+}
+.zlive-base-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px;
+}
+.zlive-base-label {
+  font-size: 12px;
+  color: #6b7889;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+.zlive-base-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #ece7da;
+  border-radius: 6px;
+  background: #fff;
+  color: #1f2d3d;
+  font-size: 16px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  letter-spacing: 0.5px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+.zlive-base-input:focus {
+  outline: none;
+  border-color: #2d6cb3;
+  box-shadow: 0 0 0 3px rgba(45,108,179,0.15);
+}
+.zlive-base-input.is-shake {
+  animation: zlive-base-shake 0.3s ease;
+  border-color: #d44a3a;
+}
+.zlive-base-radios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.zlive-base-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border: 1px solid #ece7da;
+  border-radius: 999px;
+  background: #fff;
+  color: #6b7889;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  user-select: none;
+}
+.zlive-base-radio input[type="radio"] {
+  margin: 0;
+  cursor: pointer;
+  accent-color: #2d6cb3;
+}
+.zlive-base-radio:hover {
+  background: #f5f1e8;
+}
+.zlive-base-radio:has(input:checked) {
+  background: #2d6cb3;
+  color: #fbf9f4;
+  border-color: #2d6cb3;
+}
+.zlive-base-results {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid #ece7da;
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+.zlive-base-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+.zlive-base-row-label {
+  font-size: 12px;
+  color: #6b7889;
+  font-weight: 500;
+  flex-shrink: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.zlive-base-row-value {
+  font-size: 14px;
+  color: #1f2d3d;
+  font-weight: 500;
+  word-break: break-all;
+  text-align: right;
+  letter-spacing: 0.3px;
+}
+.zlive-base-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.zlive-base-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid #ece7da;
+  background: #fff;
+  color: #6b7889;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.zlive-base-btn:hover {
+  background: #f5f1e8;
+  color: #1f2d3d;
+}
+.zlive-base-btn.is-primary {
+  background: #2d6cb3;
+  color: #fbf9f4;
+  border-color: #2d6cb3;
+}
+.zlive-base-btn.is-primary:hover {
+  background: #3a7ec2;
+  border-color: #3a7ec2;
+}
+.zlive-base-toast {
+  align-self: center;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #6b7889;
+  background: transparent;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.2s, transform 0.2s, background 0.2s;
+  pointer-events: none;
+}
+.zlive-base-toast.is-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.zlive-base-toast.is-ok {
+  background: rgba(61,122,74,0.12);
+  color: #2d6b3d;
+}
+.zlive-base-toast.is-err {
+  background: rgba(212,74,58,0.12);
+  color: #a83a2c;
+}
+@media (max-width: 540px) {
+  .zlive-tools-fab {
+    right: 16px;
+    bottom: 80px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(45,108,179,0.32), 0 2px 4px rgba(0,0,0,0.06);
+  }
+  .zlive-tools-fab .zlive-tools-fab-icon {
+    width: 22px;
+    height: 22px;
+  }
+  .zlive-tools-fab .zlive-tools-fab-label {
+    display: none;
+  }
+  .zlive-tools-menu {
+    right: 16px;
+    bottom: 134px;
+  }
+  .zlive-tools-menu .zlive-tools-menu-item {
+    min-width: 120px;
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+  .zlive-tools-modal {
+    right: 12px;
+    left: 12px;
+    bottom: 134px;
+    width: auto;
+    max-height: calc(100vh - 160px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .zlive-tools-modal-head {
+    padding: 10px 12px;
+    position: sticky;
+    top: 0;
+    background: #fbf9f4;
+    z-index: 1;
+    border-bottom: 1px solid #ece7da;
+  }
+  .zlive-calc {
+    padding: 12px;
+    gap: 8px;
+  }
+  .zlive-calc-display {
+    font-size: 28px;
+    min-height: 48px;
+    padding: 4px 8px;
+  }
+  .zlive-calc-pad {
+    gap: 4px;
+  }
+  .zlive-calc-btn {
+    height: 40px;
+    font-size: 15px;
+  }
+  .zlive-calc-btn.is-func {
+    font-size: 13px;
+  }
+  .zlive-base {
+    padding: 0;
+  }
+  .zlive-base-body {
+    padding: 12px;
+    gap: 10px;
+  }
+  .zlive-base-radios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  .zlive-base-radio {
+    justify-content: center;
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+  .zlive-base-radio input[type="radio"] {
+    margin-right: 2px;
+  }
+  .zlive-base-results {
+    padding: 8px 10px;
+    gap: 4px;
+  }
+  .zlive-base-row {
+    padding: 4px 0;
+  }
+  .zlive-base-row-label {
+    font-size: 12px;
+  }
+  .zlive-base-row-value {
+    font-size: 13px;
+  }
+  .zlive-base-input {
+    height: 38px;
+    font-size: 15px;
+    padding: 0 10px;
+  }
+  .zlive-base-actions {
+    gap: 6px;
+    margin-top: 4px;
+  }
+  .zlive-base-btn {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  .zlive-base-toast {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+}
 @-moz-keyframes fadeUp {
   from {
     opacity: 0;
@@ -2187,5 +2454,49 @@ body.dark-hero header.site-header.scrolled .site-nav a.active {
   }
   50% {
     transform: translate(20px, -30px) scale(1.04);
+  }
+}
+@-moz-keyframes zlive-base-shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+@-webkit-keyframes zlive-base-shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+@-o-keyframes zlive-base-shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+@keyframes zlive-base-shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
   }
 }
